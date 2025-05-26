@@ -12,6 +12,6 @@ steps:
 
 - script: |
     npm install
-    npx ng build --configuration production
+    ng build --configuration production
   displayName: 'npm install and build'
 

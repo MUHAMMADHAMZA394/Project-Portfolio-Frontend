@@ -1,9 +1,8 @@
-# Node.js with Angular
 trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'windows-latest'  # <-- Change this if needed
 
 steps:
 - task: NodeTool@0
@@ -12,7 +11,7 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install -g @angular/cli
     npm install
-    ng build --configuration production
+    npx ng build --configuration production
   displayName: 'npm install and build'
+

@@ -1,0 +1,56 @@
+<div class="login-container" appGlassStyle>
+  <div class="login-form" appFadeIn>
+    <h2>Register</h2>
+
+    <form [formGroup]="signup" (ngSubmit)="onSubmit()">
+      <div class="input-container">
+        <input type="text" placeholder="Username" formControlName="Username"
+               [ngClass]="{ 'is-invalid': submitted && signup.controls['Username'].errors }">
+        <div *ngIf="submitted && !signup.controls['Username'].valid" class="invalid-feedback">
+          <span *ngIf="signup.controls['Username'].hasError('required')" class="text-danger">Please Enter Name</span>
+          <span *ngIf="signup.controls['Username'].hasError('maxlength')" class="text-danger">Max Length is 50.</span>
+          <span *ngIf="signup.controls['Username'].hasError('pattern')" class="text-danger">Invalid Pattern.</span>
+        </div>
+        <div class="underline"></div>
+      </div>
+
+      <div class="input-container">
+        <input type="email" placeholder="Email" formControlName="Email"
+               [ngClass]="{ 'is-invalid': submitted && signup.controls['Email'].errors }">
+        <div *ngIf="submitted && !signup.controls['Email'].valid" class="invalid-feedback">
+          <span *ngIf="signup.controls['Email'].hasError('required')" class="text-danger">Please Enter Email</span>
+          <span *ngIf="signup.controls['Email'].hasError('email')" class="text-danger">Invalid Email Format</span>
+        </div>
+        <div class="underline"></div>
+      </div>
+
+      <div class="input-container">
+        <input type="password" placeholder="Password" formControlName="Password"
+               [ngClass]="{ 'is-invalid': submitted && signup.controls['Password'].errors }">
+        <div *ngIf="submitted && !signup.controls['Password'].valid" class="invalid-feedback">
+          <span *ngIf="signup.controls['Password'].hasError('required')" class="text-danger">Please Enter Password</span>
+          <span *ngIf="signup.controls['Password'].hasError('minlength')" class="text-danger">Minimum 6 characters</span>
+        </div>
+        <div class="underline"></div>
+      </div>
+
+      <div class="input-container">
+        <input type="password" placeholder="Confirm Password" formControlName="ConfirmPassword"
+               [ngClass]="{ 'is-invalid': submitted && signup.controls['ConfirmPassword'].errors }">
+        <div *ngIf="submitted && !signup.controls['ConfirmPassword'].valid" class="invalid-feedback">
+          <span *ngIf="signup.controls['ConfirmPassword'].hasError('required')" class="text-danger">Please Confirm Password</span>
+          <span *ngIf="signup.controls['ConfirmPassword'].hasError('mismatch')" class="text-danger">Passwords do not match</span>
+        </div>
+        <div class="underline"></div>
+      </div>
+
+      <button type="submit" class="login-btn">Register</button>
+    </form>
+
+
+    <div class="register-link">
+      Already have an account? <a routerLink="/login">Login</a>
+
+    </div>
+  </div>
+</div>

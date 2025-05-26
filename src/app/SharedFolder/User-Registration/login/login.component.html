@@ -1,0 +1,42 @@
+<div class="login-container" appGlassStyle>
+  <div class="login-form" appFadeIn>
+    <h2>Login</h2>
+
+    <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+      <div class="input-container">
+        <input type="email" placeholder="Enter your email" formControlName="Email"
+               [ngClass]="{ 'is-invalid': submitted && LoginForm.controls['Email'].errors }">
+        <div *ngIf="submitted && !LoginForm.controls['Email'].valid" class="invalid-feedback">
+          <span *ngIf="LoginForm.controls['Email'].hasError('required')" class="text-danger">Please Enter Email</span>
+          <span *ngIf="LoginForm.controls['Email'].hasError('maxlength')" class="text-danger">Max Length is 50.</span>
+          <span *ngIf="LoginForm.controls['Email'].hasError('pattern')" class="text-danger">Invalid Pattern.</span>
+        </div>
+        <div class="underline"></div>
+      </div>
+
+      <div class="input-container">
+        <input type="password" placeholder="Enter your password" formControlName="Password"
+               [ngClass]="{ 'is-invalid': submitted && LoginForm.controls['Password'].errors }">
+        <div *ngIf="submitted && !LoginForm.controls['Password'].valid" class="invalid-feedback">
+          <span *ngIf="LoginForm.controls['Password'].hasError('required')" class="text-danger">Please Enter Password</span>
+          <span *ngIf="LoginForm.controls['Password'].hasError('maxlength')" class="text-danger">Max Length is 50.</span>
+          <span *ngIf="LoginForm.controls['Password'].hasError('pattern')" class="text-danger">Invalid Pattern.</span>
+        </div>
+        <div class="underline"></div>
+      </div>
+
+      <div class="options">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="login-btn">Log In</button>
+    </form>
+
+    <div class="register-link">
+      Don't have an account? <a routerLink="/register">Register</a>
+    </div>
+  </div>
+</div>

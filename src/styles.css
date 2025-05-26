@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+}
+
+.login-form h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.input-container {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+  .input-container input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    color: white;
+  }
+
+    .input-container input::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+.underline {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 5px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 14px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forgot-password {
+  color: white;
+  text-decoration: none;
+}
+
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: white;
+  color: #6e8efb;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+  .login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+.register-link {
+  text-align: center;
+  margin-top: 25px;
+  color: white;
+  font-size: 14px;
+}
+
+  .register-link a {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative; /* ensure position is not fixed */
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

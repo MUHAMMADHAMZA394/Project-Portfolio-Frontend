@@ -1,0 +1,251 @@
+<div class="container-fluid px-0 ">
+  <div class="row mx-0">
+    <div class="col-12 px-0">
+      <div class="card card-custom">
+        <div class="card-body p-3 p-md-4 p-lg-5">
+          <!-- Navbar Section -->
+          <div class="row align-items-center g-3">
+            <!-- Logo -->
+            <div class="col-12 col-md-3 col-lg-2 order-1 order-md-1 text-center text-md-start">
+              <span class="logo">Hamza</span>
+            </div>
+
+            <!-- Navigation items -->
+            <div class="col-12 col-md-6 col-lg-6 order-3 order-md-2 mt-2 mt-md-0">
+              <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-around align-items-center">
+                <div class="nav-item-custom py-1 py-md-0">Services</div>
+                <div class="nav-item-custom py-1 py-md-0">Works</div>
+                <div class="nav-item-custom py-1 py-md-0"  routerLink="education">Education</div>
+                <div class="nav-item-custom py-1 py-md-0">Experience</div>
+              </div>
+            </div>
+            <!-- Contact number -->
+            <div class="col-12 col-md-3 col-lg-4 order-2 order-md-3 text-center text-md-end">
+              <span class="contact-number">+92 301 6468950</span>
+            </div>
+          </div>
+
+          <hr class="my-3 my-md-4">
+
+          <!-- Content Section -->
+          <div class="row">
+            <div class="col-lg-4 mt-5 text-start">
+              <h1 class="main-heading">Hey There, <br>I'm Hamza</h1>
+              <p class="gmail text-danger">muhammadhamza360864&#64;gmail.com</p>
+              <div class="experience-block">
+
+
+                <span class="years">2</span>
+                <span class="label"> year <br /> Experience</span>
+              </div>
+
+            </div>
+
+            <div class="col-lg-4 text-center">
+              <img src="assets/images/Image.jpeg" alt="Profile Image" class="profile-image">
+            </div>
+
+            <div class="col-lg-3 mt-5">
+              <p class="design-text mt-lg-3">I design beautifully simple <br> things, And I love what I do.</p>
+
+              <div class="urban-block mt-5">
+                <img src="assets/images/urbanUnit.jpg" alt="Urban Unit Logo" class="urban-logo">
+                <p class="data text-danger">The Urban Unit Full  <br />Stack Developer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Services Section -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <!-- Cards Column -->
+
+    <div class="col-lg-6">
+      <div class="row g-3">
+
+        <!-- Website Design Card -->
+        <div class="col-12">
+          <div class="white-card d-flex align-items-center">
+            <div class="icon-circle bg-success text-white me-3">
+              <i class="ri-global-line"></i>
+            </div>
+            <div>
+              <h6 class="mb-0 fw-bold">Website Design</h6>
+              <small class="text-muted">76 Projects</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile App Design Card -->
+        <div class="col-12">
+          <div class="white-card d-flex align-items-center">
+            <div class="icon-circle bg-warning text-dark me-3">
+              <i class="ri-mac-line"></i>
+
+
+            </div>
+            <div>
+              <h6 class="mb-0 fw-bold">Mobile App Design</h6>
+              <small class="text-muted">63 Projects</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Brand Identity Card -->
+        <div class="col-12">
+          <div class="white-card d-flex align-items-center">
+            <div class="icon-circle bg-danger text-white me-3">
+              <i class="ri-brush-line"></i>
+            </div>
+            <div>
+              <h6 class="mb-0 fw-bold">Brand Identity</h6>
+              <small class="text-muted">47 Projects</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Info Column -->
+    <div class="col-lg-6 mt-4 mt-lg-0">
+      <h3 class="fw-bold">What do I help?</h3>
+      <p class="text-muted">
+        I will help you with finding a solution and solve your problems.
+        We use process design to create digital products. Besides that
+        also help their business.
+      </p>
+      <p class="text-muted">
+        We use process design to create digital products.
+        Besides that also help their business.
+      </p>
+      <div class="d-flex gap-5 mt-4">
+        <div>
+          <h4 class="fw-bold mb-0">285+</h4>
+          <small>Project Completed</small>
+        </div>
+        <div>
+          <h4 class="fw-bold mb-0">190+</h4>
+          <small>Happy Clients</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="card shadow-sm" style="background: linear-gradient(135deg, #ffe5e5, #f3e5f5);">
+    <div class="card-body px-4 py-5">
+      <h1 class="text-center">My Work Experience</h1>
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-12">
+
+          <!-- Experience Entry Start -->
+          <div class="row align-items-start mb-4">
+            <div class="col-md-4 col-sm-12 text-end pe-md-4">
+              <h4 class="fw-bold ">The Urban Unit</h4>
+              <small class="me-5">May 2024 - Present</small>
+            </div>
+            <div class="col-md-8 col-sm-12 timeline">
+              <div class="timeline-entry">
+                <h4 class="fw-bold">Full Stack Developer</h4>
+                <p class="text-muted">
+                  Contributed to the Urban Immovable Property Tax System for Punjab (UIPT)
+                  by implementing both frontend features and backend RESTful APIs.<br />
+                  Implement RESTful API using ASP.NET Core Web API.<br />
+                  Implement Front End Design using Latest Angular 17+
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Experience Entry End -->
+          <!-- Another Experience Entry Start -->
+          <div class="row align-items-start mb-4">
+            <div class="col-md-4 col-sm-12 text-end pe-md-5">
+              <h4 class="fw-bold me-4">SherServe</h4>
+              <small class="me-4">08/2023 - 10/2023</small>
+            </div>
+            <div class="col-md-8 col-sm-12 timeline">
+              <div class="timeline-entry">
+                <h4 class="fw-bold">Front End Developer</h4>
+                <p class="text-muted">
+                  Completed a 3-month internship as a Frontend Developer at SherServe Software House.<br />
+                  Gained hands-on experience in building and managing web applications using Angular.<br />
+                  Assisted in implementing reactive forms and routing modules to streamline user interactions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Another Experience Entry End -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<footer class="footer mt-5">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <h3>Muhammad Hamza</h3>
+      <p>Connecting through multiple platforms</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Connect with me</h4>
+      <a href="https://wa.me/923001234567" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p><i class="fas fa-envelope"></i> hamza&#64;example.com</p>
+
+      <p><i class="fas fa-phone-alt"></i> +92 300 1234567</p>
+      <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Muhammad Hamza. All rights reserved.</p>
+  </div>
+</footer>
+
+
+

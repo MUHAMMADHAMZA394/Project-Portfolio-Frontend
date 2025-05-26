@@ -1,0 +1,59 @@
+<h2 style="text-align: center;">🎓 Add Your Education</h2>
+
+<form [formGroup]="educationForm" (ngSubmit)="onSubmit()" style="max-width: 500px; margin: auto;">
+  <label>Degree:</label>
+  <select formControlName="degreeName">
+    <option value="" disabled selected>Select Degree</option>
+    <option value="Matric">Matric</option>
+    <option value="O Level">O Level</option>
+    <option value="A Level">A Level</option>
+    <option value="Bachelor">Bachelor</option>
+    <option value="Master">Master</option>
+    <option value="PhD">PhD</option>
+  </select>
+
+  <label>Major Subject:</label>
+  <input formControlName="majorSubject" placeholder="e.g. Computer Science" />
+
+  <label>Passing Year:</label>
+  <input formControlName="passingYear" type="number" placeholder="e.g. 2023" />
+
+  <label>Total Marks:</label>
+  <input formControlName="totalMarks" type="number" />
+
+  <label>Obtained Marks:</label>
+  <input formControlName="obtainedMarks" type="number" />
+
+  <label>Upload Degree (PDF):</label>
+  <input type="file" accept=".pdf" (change)="onFileChange($event)" />
+
+  <button type="submit" [disabled]="!educationForm.valid">➕ Add Education</button>
+</form>
+
+<hr>
+
+<h3 style="text-align: center;">📋 My Education Table</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Degree</th>
+      <th>Subject</th>
+      <th>Year</th>
+      <th>Total</th>
+      <th>Obtained</th>
+      <th>Degree PDF</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let edu of educationList">
+      <td>{{ edu.degreeName }}</td>
+      <td>{{ edu.majorSubject }}</td>
+      <td>{{ edu.passingYear }}</td>
+      <td>{{ edu.totalMarks }}</td>
+      <td>{{ edu.obtainedMarks }}</td>
+      <td>
+        <a [href]="edu.degreeFileUrl" download="{{ edu.degreeName }}_Degree.pdf">Download</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

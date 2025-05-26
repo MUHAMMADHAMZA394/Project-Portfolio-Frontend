@@ -15,5 +15,5 @@ steps:
     displayName: 'Install Dependencies'
 
   - script: |
-      npx ng build Portfolio --configuration production
+      npx ng build  --configuration production
     displayName: 'Build Angular Project'

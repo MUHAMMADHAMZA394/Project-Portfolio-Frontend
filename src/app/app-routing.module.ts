@@ -11,11 +11,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./SharedFolder/User-Registration/user-registration.module').then(m => m.UserRegistrationModule)
   },
-  
 ];
-
-
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

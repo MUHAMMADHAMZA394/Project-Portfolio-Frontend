@@ -39,7 +39,6 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/remixicon/fonts/remixicon.css",
               "src/styles.css"
-
             ],
             "scripts": []
           },
@@ -99,6 +98,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles.css"
+
             ],
             "scripts": []
           }

@@ -6,6 +6,7 @@ import { EducationComponent } from './education/education.component';
 import { ServiceComponent } from './service/service.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ContactComponent } from './contact/contact.component';
     EducationComponent,
     ServiceComponent,
     ExperienceComponent,
-    ContactComponent
+    ContactComponent,
+    NavbarComponent
   ],
   imports: [
     CommonModule,

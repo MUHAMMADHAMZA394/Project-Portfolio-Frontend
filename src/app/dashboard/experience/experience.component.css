@@ -1,0 +1,127 @@
+/* Resume Section */
+.slider-section {
+  background: linear-gradient(to right, #edf2f4, #e2eafc);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.resume-card {
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.name {
+  font-size: 2.5rem;
+  color: #2b2d42;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: #8d99ae;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.contact-info p, .contact-info a {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+  .skills span {
+    background: #a8dadc;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    color: #1d3557;
+  }
+
+/* Testimonial Section */
+.testimonial-section {
+  background: #f7f7f7;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.review-heading {
+  font-size: 2rem;
+  color: #2b2d42;
+  margin-bottom: 30px;
+}
+
+.testimonial-card {
+  display: none;
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+  .testimonial-card.active {
+    display: block;
+  }
+
+.review-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.role {
+  font-style: italic;
+  color: #666;
+}
+
+.text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.review-nav button {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #555;
+  margin: 10px;
+  cursor: pointer;
+}
+
+  .review-nav button:hover {
+    color: #2b2d42;
+  }
+
+/* Footer */
+.footer {
+  background: #2b2d42;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+  .footer a {
+    color: #8ecae6;
+    text-decoration: none;
+  }

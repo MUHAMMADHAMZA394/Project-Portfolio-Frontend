@@ -6,17 +6,21 @@ import { EducationComponent } from './education/education.component';
 import { ServiceComponent } from './service/service.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const routes: Routes = [
-
-  
-
-  { path: 'dashboard', component: DashBoardComponent, canActivate: [AuthGuard] },
-  { path: 'education', component: EducationComponent, canActivate: [AuthGuard] },
-  { path: 'service', component: ServiceComponent, canActivate: [AuthGuard] },
-  { path: 'experience', component: ExperienceComponent, canActivate: [AuthGuard] },
-  { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
- 
+  {
+    path: '',
+    component: NavbarComponent,
+    children: [
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+      { path: 'dashboard', component: DashBoardComponent  },
+      { path: 'education', component: EducationComponent},
+      { path: 'service', component: ServiceComponent },
+      { path: 'experience', component: ExperienceComponent },
+      { path: 'contact', component: ContactComponent},
+    ]
+  }
 ];
 
 @NgModule({

@@ -1,1 +1,172 @@
-<p>experience works!</p>
+<div class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800">
+  <!-- Hero Section -->
+  <div class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div class="text-center">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 animate-pulse">
+          Professional
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+            Experience
+          </span>
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          Journey of growth, innovation, and technical excellence in software development
+        </p>
+        <div class="mt-8 flex justify-center">
+          <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+            <div class="flex items-center gap-2 text-white">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span class="font-medium">Software Engineer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Experience Timeline -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="relative">
+      <!-- Timeline Line -->
+      <div class="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-400 to-purple-400"></div>
+
+      <div *ngFor="let exp of experiences; let last = last" class="relative mb-16" [class.mb-0]="last">
+        <!-- Timeline Dot -->
+        <div class="absolute left-6 w-4 h-4 rounded-full border-4"
+             [ngClass]="{
+               'bg-green-400 border-green-300 shadow-lg shadow-green-400/50': exp.isActive,
+               'bg-blue-400 border-blue-300 shadow-lg shadow-blue-400/50': !exp.isActive
+             }"></div>
+
+        <!-- Experience Card -->
+        <div class="ml-20 group">
+          <div class="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+            <!-- Header -->
+            <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-6">
+              <div>
+                <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                  {{ exp.title }}
+                </h3>
+                <div class="flex items-center gap-2 text-purple-300 text-lg font-semibold mb-3">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                  {{ exp.company }}
+                </div>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-4 text-gray-300">
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a1 1 0 011-1h6a1 1 0 011 1v4m-7 4v10a1 1 0 001 1h6a1 1 0 001-1V11M8 7a1 1 0 00-1 1v2a1 1 0 001 1h8a1 1 0 001-1V8a1 1 0 00-1-1H8z"></path>
+                  </svg>
+                  <span class="text-sm">{{ exp.duration }}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  </svg>
+                  <span class="text-sm">{{ exp.location }}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Status Badge -->
+            <div *ngIf="exp.isActive" class="inline-flex items-center gap-2 bg-green-500/20 text-green-300 px-3 py-1 rounded-full text-sm font-medium mb-4">
+              <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+              Current Position
+            </div>
+
+            <!-- Description -->
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              {{ exp.description }}
+            </p>
+
+            <!-- Highlights -->
+            <div class="mb-6">
+              <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                </svg>
+                Key Achievements
+              </h4>
+              <ul class="space-y-2">
+                <li *ngFor="let highlight of exp.highlights" class="text-gray-300 flex items-start gap-3">
+                  <div class="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+                  <span>{{ highlight }}</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Technologies -->
+            <div>
+              <h4 class="text-white font-semibold mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                </svg>
+                Technologies Used
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                <span *ngFor="let tech of exp.technologies"
+                      class="bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium border border-blue-500/30 hover:border-blue-400/60 transition-colors">
+                  {{ tech }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Skills Summary -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-3xl border border-white/10 p-8">
+      <h2 class="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center gap-3">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+        </svg>
+        Technical Expertise
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Frontend Development</h3>
+          <p class="text-gray-300">Angular 17+, Reactive Forms, Component Architecture</p>
+        </div>
+        <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Backend Development</h3>
+          <p class="text-gray-300">ASP.NET Core Web API, RESTful Services</p>
+        </div>
+        <div class="text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Full Stack</h3>
+          <p class="text-gray-300">End-to-end application development and deployment</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="text-center py-12">
+    <p class="text-gray-400">
+      Continuously learning and growing in the field of software development
+    </p>
+  </div>
+</div>
